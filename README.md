@@ -60,7 +60,9 @@ The following nodes are the ones I created:
 	sudo apt-get install xterm
 	```
 * Now we are able to run the master:
-'roscore &'
+	```sh
+	roscore &
+	```
 * Now we can compile the module going inside the **ROS** directory and running
 	```sh 
 	catkin_make
