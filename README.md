@@ -22,11 +22,6 @@ The following nodes are the ones I created:
 	Here is the pseudocode of this node:
 
 	```sh
-	-Initialize the rospy node
-	-Define a global publisher to publish the Position_velocity message
-	-Define a subscriber which listens to the Odometry message and calls the odom_callback function
-	Call the user function
-
 	odom_callback(odom_msg)
 		- Get the x, y position and x,y linear velocity from the Odometry message
 		- Create a Position_velocity message
@@ -50,6 +45,11 @@ The following nodes are the ones I created:
 					- Shut down the rospy node
 				- If the user choice is invalid
 					- Display an error message
+	main()
+		- Initialize the rospy node
+		- Define a global publisher to publish the Position_velocity message
+		- Define a subscriber which listens to the Odometry message and calls the odom_callback function
+		- Call the user function
 	```
 * `goal.py`: node which prints the count of successful goal reached and cancelled goals.
 * `print.py`: node that prints the robot's distance from its target and average speed, which it obtains by subscribing to the /Position_velocity topic with a custom message. The frequency at which the information is published can be set via a parameter in the launch file.
